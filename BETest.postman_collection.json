@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "11293a9a-6541-484b-8b18-d6dfceff5185",
+		"name": "BETest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21257473"
+	},
+	"item": [
+		{
+			"name": "OrderController",
+			"item": [
+				{
+					"name": "InsertOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProductId\":\"D4F50400-5A53-4725-BD31-F963779FB61E\",\r\n    \"OrderStatus\":\"1\",\r\n    \"OrderType\":\"1\",\r\n    \"OrderBy\":\"8F399B5A-0B63-4822-A619-942AC23CFAC6\",\r\n    \"OrderedOn\":\"2022-10-20\",\r\n    \"ShippedOn\":\"2022-11-20\",\r\n    \"IsActive\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44309/api/Order",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44309",
+							"path": [
+								"api",
+								"Order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetActiveOrderDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44309/api/Order",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44309",
+							"path": [
+								"api",
+								"Order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CustomerController",
+			"item": [
+				{
+					"name": "CustomersDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:57913/BETest/Customer",
+							"host": [
+								"localhost"
+							],
+							"port": "57913",
+							"path": [
+								"BETest",
+								"Customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:57913/BETest/Customer",
+							"host": [
+								"localhost"
+							],
+							"port": "57913",
+							"path": [
+								"BETest",
+								"Customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCustomer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44309/api/Customer?UserId=170317058",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44309",
+							"path": [
+								"api",
+								"Customer"
+							],
+							"query": [
+								{
+									"key": "UserId",
+									"value": "170317058"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserId\":\"8F399B5A-0B63-4822-A619-942AC23CFAC6\",\r\n    \"Username\":\"Customer001\",\r\n    \"Email\":\"Kane@gmail.com\",\r\n    \"FirstName\":\"Kane\",\r\n    \"LastName\":\"Flemming\",\r\n    \"CreatedOn\":\"2022-11-20\",\r\n    \"IsActive\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44309/api/Customer/UpdateCustomer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44309",
+							"path": [
+								"api",
+								"Customer",
+								"UpdateCustomer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
